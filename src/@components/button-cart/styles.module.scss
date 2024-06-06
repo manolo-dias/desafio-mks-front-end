@@ -1,0 +1,20 @@
+
+.button {
+    border-radius: 8px;
+    padding: 0rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    height: 2.5rem;
+    background-color: white;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(207, 207, 207);
+    }
+    span{
+        font-weight: bold;
+        line-height: 21.94px;
+        font-size: 18px;
+    }
+}
