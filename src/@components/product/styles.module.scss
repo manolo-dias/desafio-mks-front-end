@@ -1,0 +1,114 @@
+.product {
+    background-color: white;
+    max-width: 13.5rem;
+    box-shadow: 0px 2px 8px 0px #00000022;
+    border-radius: 8px;
+
+    .productImage {
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            height: 9.5rem;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    }
+
+    .productContent {
+        padding: 1rem 1rem 0 1rem;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 45px;
+            align-items: center;
+
+            h1 {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                text-align: left;
+                color: #2C2C2C;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+                @supports (-webkit-line-clamp: 2) {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: initial;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            // preço
+            span {
+                height: 26px;
+                border-radius: 5px;
+                display: flex;
+                padding: 0 0.3rem;
+                justify-content: center;
+                align-items: center;
+                background-color: #373737;
+                color: white;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 15px;
+                text-align: left;
+
+            }
+
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 12px;
+            text-align: left;
+            color: #2C2C2C;
+
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @supports (-webkit-line-clamp: 2) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: initial;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+
+    button {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        padding: 0.5rem 2rem;
+        border: none;
+        font-size: 1rem;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        background-color: $primaryColor;
+        border-radius: 0px 0px 8px 8px;
+        font-weight: 600;
+        line-height: 18px;
+
+
+    }
+
+}
