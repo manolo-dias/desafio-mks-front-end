@@ -89,7 +89,9 @@ const dataBase = {
 
 export default function Home() {
   return (
-    <Container>
+    
+    <MainContainer>
+      <CartContainer/>
     <div className={styles.productGrid}>
       {dataBase.products.map(product => {
         return (
@@ -100,7 +102,7 @@ export default function Home() {
         )
       })}
     </div>
-    </Container>
+    </MainContainer>
   );
   
 }
