@@ -1,16 +1,32 @@
-import styles from "./styles.module.scss"
+"use client";
+import React from "react";
+import styles from "./styles.module.scss";
+import { useCart } from "./cartContext";
 
 
 
-export function hideCart(){
-    //TODO
-}
+const CartContainer: React.FC = () => {
+  const { cartItems, toggleCartVisibility, isCartVisible, removeFromCart } = useCart();
 
-
-export default function CartContainer() {
-    return (
+  return (
+    <div>
+      <button onClick={toggleCartVisibility}>Toggle Cart</button>
+      {isCartVisible && (
         <div className={styles.cartContainer}>
-            <></>
+          <h2>Shopping Cart</h2>
+          <ul>
+            {cartItems.map((item, index) => (
+              <li key={index}>
+                Item ID: {item}
+                <button onClick={() => removeFromCart(item)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+          <button onClick={toggleCartVisibility}>Close Cart</button>
         </div>
-    )
-}
+      )}
+    </div>
+  );
+};
+
+export default CartContainer;
