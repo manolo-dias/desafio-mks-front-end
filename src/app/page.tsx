@@ -2,9 +2,8 @@
 import Product from "@/@components/product";
 import styles from "./styles.module.scss"
 import MainContainer from "@/@components/main-container";
-import CartContainer from "@/@components/cart-container";
+import { CartContainer } from "@/@components/cart-container";
 import { CartProvider } from "@/@components/cart-container/cartContext";
-import ItemCard from "@/@components/button-cart";
 const dataBase = {
   "products": [
     {
@@ -92,19 +91,17 @@ const dataBase = {
 }
 
 export default function Home() {
-  return (
-    <CartProvider>
-      <MainContainer>
-        <CartContainer />
-        <div className={styles.productGrid}>
-          {dataBase.products.map((product) => (
-            <Product
-              {...product}
-              key={product.id}
-            />
-          ))}
-        </div>
-      </MainContainer>
-    </CartProvider>
+  return ( 
+    <MainContainer>
+      <CartContainer />
+      <div className={styles.productGrid}>
+        {dataBase.products.map((product) => (
+          <Product
+            {...product}
+            key={product.id}
+          />
+        ))}
+      </div>
+    </MainContainer> 
   );
 }
