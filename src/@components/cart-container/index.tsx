@@ -5,7 +5,7 @@ import { useCart } from "./cartContext";
 
 
 
-const CartContainer: React.FC = () => {
+export const CartContainer: React.FC = () => {
   const { cartItems, toggleCartVisibility, isCartVisible, removeFromCart } = useCart();
 
   return (
@@ -13,7 +13,10 @@ const CartContainer: React.FC = () => {
       <button onClick={toggleCartVisibility}>Toggle Cart</button>
       {isCartVisible && (
         <div className={styles.cartContainer}>
-          <h2>Shopping Cart</h2>
+          <div className={styles.cartTitleBox}>
+            <h1>Carrinho <br/>de compras</h1>
+          </div>
+
           <ul>
             {cartItems.map((item, index) => (
               <li key={index}>
@@ -29,4 +32,3 @@ const CartContainer: React.FC = () => {
   );
 };
 
-export default CartContainer;
