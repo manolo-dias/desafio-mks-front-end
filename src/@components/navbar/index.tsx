@@ -1,3 +1,4 @@
+'use client'
 import ButtonCart from "../button-cart"
 import styles from "./styles.module.scss"
 export default function Navbar(){

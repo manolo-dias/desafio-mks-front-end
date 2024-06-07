@@ -20,13 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        <ApplicationProviders>
-          <Navbar/>
+      <ApplicationProviders>
+        <body
+          className={montserrat.className}
+          style={{
+            minHeight: '100vh', 
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          }}>
+          <Navbar />
           {children}
-          <Footer/>
-        </ApplicationProviders>
-      </body>
+          <Footer />
+        </body>
+      </ApplicationProviders>
     </html>
   );
 }

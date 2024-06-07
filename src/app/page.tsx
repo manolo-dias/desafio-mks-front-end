@@ -4,6 +4,7 @@ import styles from "./styles.module.scss"
 import MainContainer from "@/@components/main-container";
 import { CartContainer } from "@/@components/cart-container";
 import { useProductsApi } from "@/@hooks/use-products-api";
+import SpinnerComponent from "@/@components/spinner";
 
 export default function Home() {
   const { getProducts } = useProductsApi()
@@ -14,14 +15,16 @@ export default function Home() {
     sortBy: 'name'
   });
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return (
+    <SpinnerComponent />
+  )
   if (error || !data) return <div>Error...</div>
 
   return ( 
     <MainContainer>
       <CartContainer />
       <div className={styles.productGrid}>
-        {data.products.map((product) => (
+        {data.products.map((product) => ( 
           <Product
             {...product}
             key={product.id}
