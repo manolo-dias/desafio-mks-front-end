@@ -50,6 +50,22 @@
     line-height: 24.41px;
 }
 
+.background {
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+    align-items: flex-start;
+
+    .closeButton {
+        margin-right: 0;
+        font-size: large;
+        font-weight: 700;
+
+    }
+}
+
 
 .buttonCheckout {
     background-color: black;
