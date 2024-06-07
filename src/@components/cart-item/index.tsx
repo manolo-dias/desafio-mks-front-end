@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import styles from "./styles.module.scss";
-import { useCart } from "../cart-container/cartContext";
+import styles from "./styles.module.scss"; 
 import RemoveItemButton from "./remove-item-button";
 import QuantityButton from "./quantity-button";
 import { BRL } from "@/utils/price-format";
+import { useCart } from "@/@hooks/cartContext";
 
 export default function CartItem({ itemId }: { itemId: number }) {
   const { getItem, removeFromCart } = useCart()

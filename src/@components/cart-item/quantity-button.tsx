@@ -1,7 +1,7 @@
 
-import { useState } from "react";
-import { useCart } from "../cart-container/cartContext";
+import { useState } from "react"; 
 import styles from "./styles.module.scss"; 
+import { useCart } from "@/@hooks/cartContext";
 
 export default function QuantityButton ({ itemId } :{ itemId: number}) {
   const { incrementItem, decrementItem, getItem } = useCart()

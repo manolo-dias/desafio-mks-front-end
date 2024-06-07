@@ -1,8 +1,10 @@
 import Navbar from "@/@components/navbar";
+import 'react-modern-drawer/dist/index.css'
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./global.css"
 import Footer from "@/@components/footer";
+import ApplicationProviders from "./application.providers";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <ApplicationProviders>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </ApplicationProviders>
       </body>
     </html>
   );

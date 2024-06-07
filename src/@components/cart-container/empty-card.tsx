@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./styles.module.scss";
-import { useCart } from "./cartContext";
+import styles from "./styles.module.scss"; 
 import Drawer from "../drawer";
 import CartItem from "../cart-item"; 
 import TotalPriceCard from "./total-price-card";

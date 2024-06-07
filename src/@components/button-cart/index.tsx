@@ -1,8 +1,8 @@
 'use client'
 import React from "react";
 import { CartIcon } from "./icon";
-import styles from "./styles.module.scss";
-import { useCart } from "../cart-container/cartContext";
+import styles from "./styles.module.scss"; 
+import { useCart } from "@/@hooks/cartContext";
 
 export default function ButtonCart() {
   const { getCartItems, toggleCartVisibility } = useCart(); 

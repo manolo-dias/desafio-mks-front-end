@@ -1,9 +1,9 @@
 "use client";
-import { ProductDto } from "@/@service/dto/product";
-import { useCart } from "../cart-container/cartContext";
+import { ProductDto } from "@/@service/dto/product"; 
 import { BuyIcon } from "./icon";
 import styles from "./styles.module.scss";
 import React from "react";
+import { useCart } from "@/@hooks/cartContext";
  
 export default function Product(product: ProductDto) {
   const { addToCart, getItem , toggleCartVisibility} = useCart();
